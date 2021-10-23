@@ -1,0 +1,270 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "hero"
+    "content"
+    "footer";
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  position: absolute;
+  width: 40%;
+  height: 800px;
+  z-index: 2;
+
+  .text-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 800px;
+    justify-items: center;
+    align-items: center;
+
+    .text-overlay {
+      padding: 50px;
+      h4 {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+      }
+      p {
+        margin-top: 20px;
+        font-family: Poppins;
+        font-style: normal;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.btnClass {
+  font-size: 18px;
+  font-family: Poppins;
+  color: white;
+  background: #9f9b4d;
+  border-radius: 30px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: block;
+  z-index: 5;
+}
+
+.gap {
+  margin-top: 15px;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+}
+
+.icon-2 {
+  width: 35px;
+  height: 40px;
+}
+
+.theme-text {
+  color: #767000;
+}
+.hero {
+  grid-area: "hero";
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  background-color: wheat;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-image: url("../../assets/images/image\ 1.png");
+  background-size: cover;
+  height: 800px;
+}
+
+.hero-s {
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: end;
+  justify-content: center;
+  z-index: 2;
+
+  .hover-icon {
+    justify-self: center;
+    display: block;
+    cursor: pointer;
+    img {
+      width: 70px;
+      height: 80px;
+    }
+  }
+}
+
+.menu {
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 10%;
+  align-content: center;
+  z-index: 4;
+
+  .brand {
+    font-family: Raleway;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    text-align: left;
+
+    padding: 10px 10px 10px 80px;
+  }
+
+  .menu-list {
+    list-style: none;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 0.15fr));
+    justify-content: end;
+    align-items: center;
+  }
+  li {
+    letter-spacing: 1px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.content {
+  h3 {
+    font-family: Inter;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin: 40px 80px 0px 80px;
+    column-gap: 40px;
+
+    .gallery-card {
+      position: relative;
+      width: 100%;
+      img {
+        border-radius: 15px;
+        width: 100%;
+      }
+
+      .caption {
+        box-sizing: border-box;
+        width: 100%;
+        height: 20%;
+        opacity: 2px;
+        padding: 10px 25px;
+        position: absolute;
+        top: 75%;
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(4px);
+        h4 {
+          font-family: Inter;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: bold;
+        }
+        p {
+          margin-top: 10px;
+          font-family: Poppins;
+          font-style: normal;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  grid-area: "footer";
+  margin-top: 100px;
+  background-color: #767000;
+  padding: 40px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  column-gap: 100px;
+
+  .account {
+    display: grid;
+    grid-template-rows: auto;
+
+    .brand {
+      color: white;
+      font-size: 24px;
+    }
+    .place {
+      margin-top: 20px;
+      p {
+        font-family: Poppins;
+        color: white;
+        font-size: 20px;
+      }
+      .icon {
+        margin-right: 15px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .media-social {
+      display: grid;
+      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(25px, 50px));
+
+      img {
+        width: 27px;
+        height: 30px;
+      }
+    }
+  }
+  .form {
+    h4 {
+      color: white;
+      font-size: 18px;
+      font-family: Inter;
+    }
+    .form-submit {
+      input {
+        padding: 10px;
+        margin-top: 10px;
+        width: 50%;
+        border-radius: 10px;
+        height: 10px;
+        border: none;
+      }
+      input:focus {
+        border: none;
+      }
+    }
+  }
+}
