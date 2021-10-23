@@ -1,7 +1,6 @@
 import React from "react";
 import {
   arrowIcon,
-  bgImage,
   downArrow,
   fb,
   gallery1,
@@ -34,7 +33,7 @@ const Home = () => {
       <div className="container">
         <div className="hero-s">
           <div className="hover-icon">
-            <img className="icon-2" src={downArrow} />
+            <img className="icon-2" src={downArrow} alt="arrow" />
           </div>
         </div>
         <div className="overlay">
@@ -47,7 +46,7 @@ const Home = () => {
               </p>
               <div className="gap"></div>
               <button className="btnClass">
-                Explore <img className="icon" src={arrowIcon} />{" "}
+                Explore <img className="icon" src={arrowIcon} alt="arrow" />{" "}
               </button>
             </div>
           </div>
@@ -71,7 +70,7 @@ const Home = () => {
           <h3>Facility</h3>
           <div className="gallery">
             <div className="gallery-card">
-              <img src={gallery1} />
+              <img src={gallery1} alt="Gallery" />
               <div className="caption">
                 <h4>Speedboat</h4>
                 <p>
@@ -81,7 +80,7 @@ const Home = () => {
               </div>
             </div>
             <div className="gallery-card">
-              <img src={gallery2} />
+              <img src={gallery2} alt="Gallery" />
               <div className="caption">
                 <h4>Snorkling</h4>
                 <p>
@@ -91,7 +90,7 @@ const Home = () => {
               </div>
             </div>
             <div className="gallery-card">
-              <img src={gallery3} />
+              <img src={gallery3} alt="Gallery" />
               <div className="caption">
                 <h4>Diving</h4>
                 <p>
@@ -107,7 +106,7 @@ const Home = () => {
             <h3 className="brand">RAUN .</h3>
             <div className="place">
               <p>
-                <img className="icon" src={placeIcon} />
+                <img className="icon" src={placeIcon} alt="Place Icon" />
                 Jl. Cenderwasih 20, Jakarta Barat, Indonesia
               </p>
             </div>
