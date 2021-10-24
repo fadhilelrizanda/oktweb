@@ -1,7 +1,6 @@
 import React from "react";
 import {
   arrowIcon,
-  downArrow,
   fb,
   gallery1,
   gallery2,
@@ -9,6 +8,11 @@ import {
   ig,
   placeIcon,
   twitter,
+  destiny1,
+  destiny2,
+  destiny3,
+  destiny4,
+  destiny5,
 } from "../../assets";
 import "./home.scss";
 
@@ -31,11 +35,6 @@ const Home = () => {
         />
       </header>
       <div className="container">
-        <div className="hero-s">
-          <div className="hover-icon">
-            <img className="icon-2" src={downArrow} alt="arrow" />
-          </div>
-        </div>
         <div className="overlay">
           <div className="text-container">
             <div className="text-overlay">
@@ -45,9 +44,11 @@ const Home = () => {
                 with us with us
               </p>
               <div className="gap"></div>
-              <button className="btnClass">
-                Explore <img className="icon" src={arrowIcon} alt="arrow" />{" "}
-              </button>
+              <a href="#content">
+                <button className="btnClass">
+                  Explore <img className="icon" src={arrowIcon} alt="arrow" />{" "}
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -56,17 +57,25 @@ const Home = () => {
             <h3 className="brand">RAUN .</h3>
             <ul className="menu-list">
               <li>
-                <p className="theme-text">Home</p>
+                <a href="#home">
+                  <p className="theme-text">Home</p>
+                </a>
               </li>
-              <li>Destination</li>
-              <li>Contact Us</li>
               <li>
-                <button className="btnClass">Explore</button>
+                <a href="#loc">Destination</a>
+              </li>
+              <li>
+                <a href="#contact">Contact Us</a>
+              </li>
+              <li>
+                <a href="#content">
+                  <button className="btnClass">Explore</button>
+                </a>
               </li>
             </ul>
           </nav>
         </div>
-        <div className="content">
+        <div id="content" className="content">
           <h3>Facility</h3>
           <div className="gallery">
             <div className="gallery-card">
@@ -101,6 +110,56 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="destination" id="loc">
+          <div className="destinationCaption">
+            <div className="destinationHero">
+              <h4>Find your journey of life to remember</h4>
+            </div>
+            <div className="destinationCap">
+              <p>
+                Commodo enim ad do officia. Et fugiat quis fugiat culpa sint
+                culpa in ullamco ut reprehenderit tempor proident. Aliquip elit
+                ad qui anim aute ullamco magna. Ullamco occaecat laboris ullamco
+                amet ea eu labore nostrud. Aliqua nisi deserunt ex eu aliquip
+                consequat. Consequat ut aliquip cillum ex do eiusmod tempor.
+                Minim voluptate sunt enim dolor nostrud id non enim pariatur
+                sint ea fugiat.
+              </p>
+            </div>
+          </div>
+          <div className="destinyGallery">
+            <div className="destinationCard">
+              <img src={destiny1} className="destinyImg" alt="destination" />
+              <div className="location">
+                <p>Padang</p>
+              </div>
+            </div>
+            <div className="destinationCard">
+              <img src={destiny2} className="destinyImg" alt="destination" />
+              <div className="location">
+                <p>Padang</p>
+              </div>
+            </div>
+            <div className="destinationCard middleDestiny">
+              <img src={destiny3} className="destinyImg " alt="destination" />
+              <div className="location">
+                <p>Padang</p>
+              </div>
+            </div>
+            <div className="destinationCard">
+              <img src={destiny4} className="destinyImg" alt="destination" />
+              <div className="location">
+                <p>Padang</p>
+              </div>
+            </div>
+            <div className="destinationCard">
+              <img src={destiny5} className="destinyImg" alt="destination" />
+              <div className="location">
+                <p>Padang</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="footer">
           <div className="account">
             <h3 className="brand">RAUN .</h3>
@@ -116,7 +175,7 @@ const Home = () => {
               <img className="icon" src={twitter} alt="twitter" />
             </div>
           </div>
-          <div className="form">
+          <div className="form" id="contact">
             <h4>Contact Us</h4>
             <div className="form-submit">
               <input

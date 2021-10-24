@@ -8,6 +8,11 @@ import gallery1 from "./images/Mask Group 1.png";
 import gallery2 from "./images/Mask Group 2.png";
 import gallery3 from "./images/Mask Group 3.png";
 import placeIcon from "./images/place.png";
+import destiny1 from "./images/destiny-1.jpg";
+import destiny2 from "./images/destiny-2.jpg";
+import destiny3 from "./images/destiny-3.jpg";
+import destiny4 from "./images/destiny-4.jpg";
+import destiny5 from "./images/destiny-5.jpg";
 
 export {
   bgImage,
@@ -20,4 +25,9 @@ export {
   gallery2,
   gallery3,
   placeIcon,
+  destiny1,
+  destiny2,
+  destiny3,
+  destiny4,
+  destiny5,
 };
